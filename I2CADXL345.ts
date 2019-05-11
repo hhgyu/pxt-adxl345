@@ -232,8 +232,8 @@ namespace hhgyu {
 
         //% blockId=ADXL345_get
         //% block="%adxl345|get|$dim"
-        //% dim.defl=ADXL345Dimension.Y
-        public get(dim: ADXL345Dimension): number {
+        //% dim.defl=ADXL345Dimension.X
+        public get(dim: ADXL345Dimension = ADXL345Dimension.X): number {
             if (dim == ADXL345Dimension.X)
                 return this.readRegisterI16(ADXL345Register.DATAX0)
             else if (dim == ADXL345Dimension.Y)
