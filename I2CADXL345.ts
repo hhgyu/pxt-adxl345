@@ -62,10 +62,10 @@ namespace hhgyu {
     }
 
     class ADXL345 {
-        private _address: number = 0x53;
-        private _range: ADXL345Range = 0x53;
-        private _hasError: boolean;
-        constructor(address: number = 0x53, range: ADXL345Range = ADXL345Range.R2_G) {
+        private _address: number;
+        private _range: ADXL345Range;
+        
+        public constructor(address: number = 0x53, range: ADXL345Range = ADXL345Range.R2_G) {
             this._address = address
             this._range = range;
         }
@@ -147,7 +147,7 @@ namespace hhgyu {
         public getDeviceID():number {
             return this.readRegister(ADXL345Register.DEVID)
         }
-        
+
         public getX():number {
             return this.readRegisterI16(ADXL345Register.DATAX0)
         }
