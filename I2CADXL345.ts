@@ -61,10 +61,10 @@ namespace hhgyu {
         R2_G           = 0b00    // +/- 2g (default value)
     }
 
-    class ADXL345 {
+    export class ADXL345 {
         private _address: number;
         private _range: ADXL345Range;
-        
+
         public constructor(address: number = 0x53, range: ADXL345Range = ADXL345Range.R2_G) {
             this._address = address
             this._range = range;
