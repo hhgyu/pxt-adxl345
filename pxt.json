@@ -1,0 +1,13 @@
+{
+    "name": "pxt-adxl345",
+    "version": "0.0.1",
+    "description": "adxl345",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "I2CADXL345.ts"
+    ],
+    "public": true
+}
